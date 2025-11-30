@@ -1,0 +1,1 @@
+clang sources/main.c -o main.o && ./main.o
