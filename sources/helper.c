@@ -1,6 +1,7 @@
 #include "helper.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 #define PRINT_TYPE(x) _Generic((x), \
     int: "int",                     \
@@ -44,9 +45,11 @@ void fill_array_text_chars(char *arr_data, FILE *file)
 
 void read_by_each_line(char *content, int *counter)
 {
+      setlocale(LC_ALL, "el_GR.UTF-8");
   for (int i = 0; i < *counter; i++)
   {
     printf("%c", content[i]);
   }
   printf("\n");
+
 }
